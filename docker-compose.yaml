@@ -7,7 +7,7 @@ services:
       - "geth"
       - "--datadir=/datadir"
       - "--genesis=/datadir/genesis.json"
-      - "--networkid=17243"
+      - "--networkid=14004"
       - "--nodekeyhex=633ab917d09441de38ae9251e79ced41df39a1c338842b826c18fb1773246e18"
       - "--syncmode=full"
     volumes:
@@ -33,7 +33,7 @@ services:
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
-      - "--networkid=17243"
+      - "--networkid=14004"
     volumes:
       - "./genesis.json:/datadir/genesis.json"
       - "./genesis/keystore:/datadir/keystore"
@@ -56,7 +56,7 @@ services:
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
-      - "--networkid=17243"
+      - "--networkid=14004"
     volumes:
       - "./genesis.json:/datadir/genesis.json"
       - "./genesis/keystore:/datadir/keystore"
@@ -79,7 +79,7 @@ services:
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
       - "--gcmode=archive"
       - "--syncmode=full"
-      - "--networkid=17243"
+      - "--networkid=14004"
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     volumes:
@@ -96,7 +96,7 @@ services:
       - "--datadir=/datadir"
       - "--genesis=/datadir/genesis.json"
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
-      - "--networkid=17243"
+      - "--networkid=14004"
       - "--gcmode=archive"
       - "--syncmode=full"
       - "--http"
@@ -128,7 +128,7 @@ services:
       - "faucet"
       - "--genesis=/datadir/genesis.json"
       - "--bootnodes=enode://5c8e90050fabb7e14e4921dc107caf533140112245e7a231d0edc49861cd779760ad4804e7034952a5cc79422fa9d31c54e9a6141fb4995af7a6bfce7a39140f@host.docker.internal:30303"
-      - "--network=17243"
+      - "--network=14004"
       - "--account.json=/datadir/keystore/UTC--2022-07-25T01-38-21.628Z--f2b6d1f1b74ab116a56ceb01bf48c40e33836950"
       - "--account.pass=/datadir/password.txt"
       - "--rpcapi=ws://rpc:8546"
@@ -158,7 +158,7 @@ services:
     image: ankrnetwork/bas-staking-ui:devel
     environment:
       REACT_APP_ENVIRONMENT: "env"
-      CHAIN_ID: "14003"
+      CHAIN_ID: "14004"
       CHAIN_NAME: "BAS devnet"
       CHAIN_RPC: "http://192.168.10.140:8545"
       EXPLORER_HOME_URL: "http://192.168.10.140:4000/"
@@ -168,9 +168,9 @@ services:
       # new env
       REACT_APP_API_ENDPOINT: "http://192.168.10.140:8545"
       REACT_APP_DEFAULT_NETWORK: "default"
-      REACT_APP_CHAIN_ID: "14003"
+      REACT_APP_CHAIN_ID: "14004"
       REACT_APP_EXPLORER_URL: "http://192.168.10.140:4000/"
-      REACT_APP_CHAIN_NAME: "BAS devnet #14003"
+      REACT_APP_CHAIN_NAME: "BAS devnet #14004"
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     ports:
